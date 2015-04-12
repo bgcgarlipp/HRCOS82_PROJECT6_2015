@@ -4,7 +4,7 @@ Automatic Facial Expression Recognition
 Automatic Facial Expression Recognition
 
 Project Membership:
-Leader: Prof. Christian W. Omlin (christian.omlin@gmail.com)
+Leader: Prof. Christian W. Omlin 
 
 Staff:
 
@@ -25,7 +25,7 @@ Performance comparisons between support vector machines and convolutional neural
   Keywords: Computer Vision Facial Expression Recognition Neural Networks Human/Computer Interaction  
 
 Research Questions:
-How does the classifiers’ performances compare with and without feature extraction? Can the same classifiers be used for the detection of the intensity of facial expressions and how well do they perform? How does the performance of a standard classifier (support vector machine) compare with that of more purpose-built classifier (convolutional neural networks)? What are possible real-world applications?  
+How does the classifiersâ€™ performances compare with and without feature extraction? Can the same classifiers be used for the detection of the intensity of facial expressions and how well do they perform? How does the performance of a standard classifier (support vector machine) compare with that of more purpose-built classifier (convolutional neural networks)? What are possible real-world applications?  
 
 Required resources:
 Personal computer Facial expression databases
