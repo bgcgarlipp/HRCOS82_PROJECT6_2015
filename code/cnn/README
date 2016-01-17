@@ -1,0 +1,18 @@
+1. run isntall script ./install_cuda
+# Setup your gpu for processing
+create file  ~/.theanorc
+#content
+[global]
+floatX = float32
+device = gpu0
+
+[nvcc]
+fastmath = True
+
+2. copy CK+/cohn-kanade-images to data_pre_processing/datasets
+3. copy BP4D/BP4D-training to data_pre_processing/BP4D-training
+4. run sudo ./data_preprocessing.sh
+5. run sudo ./AU_training.sh
+6. run sudo ./AU_evalute.sh 
+
+

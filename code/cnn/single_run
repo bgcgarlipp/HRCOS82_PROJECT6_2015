@@ -1,0 +1,2 @@
+sudo python AU_CNN_evaluate_single.py M2_T3_025.jpg
+sudo python AU_CNN_evaluate_single.py M013_T8_243.jpg
