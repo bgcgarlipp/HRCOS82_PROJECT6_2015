@@ -1,0 +1,4 @@
+This folder is used by "CaptureME.py" as a place holder for running the capture application. An image is captured using the web camera and stored as "image.jpg"
+This is picked up by parseAU.pyt and classified.
+
+Note that the folder classifierData contains learned classifier data

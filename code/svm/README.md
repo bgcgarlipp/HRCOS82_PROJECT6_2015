@@ -1,6 +1,6 @@
 # Instructions to build code:
 
-1. You need the following installed:
+1) You need the following installed:
 	GCC 4.7
 	Cmake 2.8 (minimum)
 	OpenCV 2.4.8
@@ -8,24 +8,25 @@
 	Python Numpy library
 	Python scipy library
 
-2. Navigate to svm/build folders
+2) Navigate to svm/build folders
 
-3. Run CMake (enter the following):
+3) Run CMake (enter the following):
 
-cmake ..
+>	cmake ..
 
-4. Run Make (enter the following):
+4) Run Make (enter the following):
 
-make
+>	make
 
-5. Install the SVM application (enter the following):
+5) Install the SVM application (enter the following):
 
-make install
+>	make install
 
-6. To run the SVM classifier run one of the scripts supplied in the assets folders, e.g.:
+6) To run the SVM classifier run one of the scripts supplied in the assets folders, e.g.:
 
-cd ../assets/BP4D-full
-sh train_BP4D-full.sh
+>	cd ../assets/BP4D-full
+>	sh train_BP4D-full.sh
 
-Please check folder structure.png for required folder structure
+Please check folder structure.png for required folder structure:
+
 ![GitHub Logo](Folder_Structure.png)
