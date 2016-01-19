@@ -1,7 +1,7 @@
 /**
  *
  * @file    SVMClassifier.cpp
- *
+ * @author  Daniele Bellavista (Emotime) 
  * @brief   Implementation of SVMClassifier
  *
  */

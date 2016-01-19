@@ -1,6 +1,7 @@
 /**
  *
  * @file    Classifier.h
+ * @author  Daniele Bellavista (Emotime) 
  * @brief   Definition of Classifier
  *
  */

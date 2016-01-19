@@ -1,6 +1,7 @@
 /**
  *
  * @file    TrainingParameters.h
+ * @author  Daniele Bellavista (Emotime) 
  * @date    01/10/2014 01:50:29 AM
  * @brief   Global parameter algorithm
  *

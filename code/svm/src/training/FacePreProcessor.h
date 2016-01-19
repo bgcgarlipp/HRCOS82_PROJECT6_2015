@@ -1,6 +1,7 @@
 /**
  *
  * @file    FacePreProcessor.h
+ * @author  Daniele Bellavista (Emotime) 
  * @brief   Definition of FacePreProcessor
  *
  */

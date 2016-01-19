@@ -1,6 +1,7 @@
 /**
  *
  * @file    string_utils.h
+ * @author  Daniele Bellavista (Emotime) 
  * @date    12/30/2013 02:24:44 PM
  * @brief   Utility functions for strings
  *

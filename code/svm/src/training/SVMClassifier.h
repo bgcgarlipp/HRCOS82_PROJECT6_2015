@@ -1,6 +1,7 @@
 /**
  *
  * @file    SVMClassifier.h
+ * @author  Daniele Bellavista (Emotime) 
  * @brief   Definition of SVMClassifier
  *
  */

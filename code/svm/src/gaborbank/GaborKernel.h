@@ -1,6 +1,7 @@
 /**
  *
  * @file    GaborKernel.h
+ * @author  Daniele Bellavista (Emotime) 
  * @brief   Contains the declaration of GaborKernel
  *
  */

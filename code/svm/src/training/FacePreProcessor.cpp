@@ -1,6 +1,6 @@
 /**
  * @file    FacePreProcessor.cpp
- *
+ * @author  Daniele Bellavista (Emotime) 
  * @date    01/10/2014 12:48:37 AM
  * @brief
  *

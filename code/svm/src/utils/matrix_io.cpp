@@ -1,6 +1,7 @@
 /**
  *
  * @file    matrix_io.cpp
+ * @author  Daniele Bellavista (Emotime) 
  * @brief   Implementation of matrix_io.h utils
  *
  */

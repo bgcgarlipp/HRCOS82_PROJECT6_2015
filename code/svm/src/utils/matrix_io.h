@@ -1,6 +1,7 @@
 /**
  *
  * @file    matrix_io.h
+ * @author  Daniele Bellavista (Emotime) 
  * @brief   IO utilities for opencv matrix.
  *
  */

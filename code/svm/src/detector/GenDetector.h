@@ -3,8 +3,10 @@
  * @file    GeneralDetector.h
  * @author  Daniele Bellavista (Emotime)
  * @date    12/27/2013 12:18:32 PM
- *
+ * @updatedby: John Eatwell (35264926)
+ * @modified: Updated to remove unwanted code with the intent of AU classification
  */
+
 #ifndef SRC_DETECTOR_GENDETECTOR_H_
 #define SRC_DETECTOR_GENDETECTOR_H_
 

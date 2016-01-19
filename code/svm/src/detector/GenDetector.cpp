@@ -1,5 +1,7 @@
 /**
  * @file    GenDetector.cpp
+ * @author  Daniele Bellavista (Emotime) 
+ * @updatedby: John Eatwell (35264926)
  * @date    orig: 01/10/2014 update: Nov 2015
  * @details Modified by John Eatwell (35264926) for use as a 
  *          general AU and Emotion classifier

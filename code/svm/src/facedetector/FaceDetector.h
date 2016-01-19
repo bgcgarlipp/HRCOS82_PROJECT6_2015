@@ -1,7 +1,7 @@
 /**
  *
  * @file    FaceDetector.h
- *
+ * @author  Daniele Bellavista (Emotime) 
  * @date    01/10/2014 12:26:04 AM
  * @brief   Defintion of FaceDetector
  *

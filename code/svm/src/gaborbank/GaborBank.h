@@ -1,7 +1,7 @@
 /**
  *
  * @file    GaborBank.h
- * @author
+ * @author  Daniele Bellavista (Emotime) 
  * @date
  * @brief   Contains class and constant for generation of gabor banks.
  *

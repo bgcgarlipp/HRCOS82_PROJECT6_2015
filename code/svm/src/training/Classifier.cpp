@@ -1,7 +1,7 @@
 /**
  *
  * @file    Classifier.cpp
- *
+ * @author  Daniele Bellavista (Emotime) 
  * @brief   The Classifier implementation
  *
  * @details
