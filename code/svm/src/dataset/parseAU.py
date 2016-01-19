@@ -1,6 +1,11 @@
 #!/usr/bin/env python2
+
 '''
-@author: John Eatwell
+    File name:      parseAU.py
+    Update Author:  John Eatwell (35264926)
+    Date created:   10/09/2015
+    Python Version: 2.7
+	Details:        This was used to be called by the mobile application backend to predict the AU present in an emotion
 '''
 
 import argparse

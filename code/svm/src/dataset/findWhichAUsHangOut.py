@@ -1,5 +1,13 @@
 #!/usr/bin/env python2
 
+'''
+    File name:      findWhichAUsHangOut.py
+    Update Author:  John Eatwell (35264926)
+    Date created:   10/09/2015
+    Python Version: 2.7
+	Details:        This was a fun side project which we did to see groupings of AU, when we thought that we could use AU to link to Emotions
+'''
+
 import os
 import sys
 import sets
@@ -46,7 +54,6 @@ def findAUWhichAoocTogether(ckEmoFolder, resultsFileAUSort, resultsFileCountSort
     '''
     auSiblings = {}         #dict<AU, dict<AU, Count>>
     auCount = {}            #dict<AU, Count>
-#     auNonCombatants = {}    #dict<AU, set<AU>>
     allAU = set()
         
     subjects = [ x for x in os.listdir(ckEmoFolder) if isdir(join(ckEmoFolder, x)) ]

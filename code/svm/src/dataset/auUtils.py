@@ -1,5 +1,11 @@
 #!/usr/bin/env python2
-
+'''
+    File name:      auUtils.py
+    Author:         John Eatwell (35264926)
+    Date created:   10/09/2015
+    Python Version: 2.7
+	Details:        Utilities file for file operations
+'''
 import os
 import fnmatch
 

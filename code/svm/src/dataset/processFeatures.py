@@ -1,7 +1,14 @@
 #!/usr/bin/env python2
-"""
-  Calculate Gabor features features
-"""
+
+'''
+    File name:      processFeatures.py
+	Original Author: Emotime
+    Update Author:  John Eatwell (35264926)
+    Date created:   10/09/2015
+    Python Version: 2.7
+	Details:        Feature extraction using Gabor
+'''
+
 import os
 import argparse
 import datasetConfigParser as dcp

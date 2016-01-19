@@ -1,5 +1,11 @@
 #!/usr/bin/env python2
 '''
+    File name:      createBp4dCsv.py
+    Author:         John Eatwell (35264926)
+    Date created:   10/09/2015
+    Python Version: 2.7
+	Details:        Creates training and testing data for training AU against BP4D database
+
 	Use: python createBp4dCsv.py --cfg dataset.cfg --cnt 1010 ../../../databases/BP4D/images ../../../databases/BP4D/aucoding Major_bp4d.csv
 '''
 
@@ -223,7 +229,7 @@ def parseConfig(configFile):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--cfg", default="bp4f_full.cfg", help="Dataset config file name")
-    parser.add_argument("--cnt", dest='cnt', type=int, default=1000, help="Count used")
+    parser.add_argument("--cnt", dest='cnt', type=int, default=1000, help="AU Count extracted")
     parser.add_argument("imgFolder", help="Image database folder")
     parser.add_argument("lblFolder", help="Label folder")
     parser.add_argument("output", help="Output File")

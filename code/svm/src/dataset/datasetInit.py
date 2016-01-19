@@ -1,7 +1,14 @@
 #!/usr/bin/env python2
-"""
-   Initialize a dataset
-"""
+
+'''
+    File name:      datasetInit.py
+	Original Author: Emotime
+    Update Author:  John Eatwell (35264926)
+    Date modified:   10/09/2015
+    Python Version: 2.7
+	Details:     CLSLIST were created to indicate the AU / Emotion to be trained. Paths are also create differently now, with valiation/data bein used to store labels to validate test data
+
+'''
 import os
 import sys
 import argparse
@@ -59,11 +66,7 @@ def dataset_init(dsPath, config):
     pth=join(dsPath, config['CLASSIFIER_ADA_FOLDER'])
     if not os.path.exists(pth):
         os.makedirs(pth)
-    # Copy configuration
-    #with open(cfgFile, "r") as conf:
-        #configuration = conf.read()
-        #with open(join(dsPath, dsCfgName), "w") as nconf:
-            #nconf.write(configuration)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

@@ -1,7 +1,14 @@
-"""
+#!/usr/bin/env python2
 
+'''
+    File name:      datasetConfigParser.py
+    Author:         John Eatwell (35264926)
+    Date created:   10/09/2015
+    Python Version: 2.7
+	Details:        Used by all most python processes for extracting configuration
 
-"""
+'''
+
 import ConfigParser as cp
 from string import upper
 
@@ -37,11 +44,6 @@ def parse_ini_config(configFile):
     parser=cp.ConfigParser()
     parser.read(configFile)
 
-#     classes=[]
-#     for opt in parser.options('AUCLASSES'):
-#         classes.append(opt)
-#     config['AUCLASSES']=classes
-
     size={}
     for opt in parser.options('SIZE'):
         size[opt]=parser.get('SIZE',opt)
@@ -61,11 +63,6 @@ def parse_ini_config(configFile):
 
     # Class lists incorperate the idea of AU and emotion
     clslist=[]
-    
-#     print "TYPE: {}".format(config["RECOG_TYPE"])
-#     print "CLASSES: {}".format(config["RECOG_CLASS"])
-#     print "DATABASE: {}".format(config["RECOG_DATABASE"])
-
     csvList = [int(x) for x in config["RECOG_CLASS"].replace(" ", "").split(',')]
     config['SEARCH_LIST'] = csvList
     

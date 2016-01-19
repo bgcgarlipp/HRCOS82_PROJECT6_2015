@@ -1,5 +1,15 @@
 #!/usr/bin/env python2
 
+'''
+    File name:      performVerification.py
+    Update Author:  John Eatwell (35264926)
+    Date created:   10/09/2015
+    Python Version: 2.7
+	Details:        This is the "testing phase" of the application.
+	Note:           numpy, theano and scipy python libraries will be required to run
+	Side Note:      The calculations provided were agreed on by both parties (CNN and SVM)
+'''
+
 import argparse
 import sys
 import datasetConfigParser as dcp
@@ -85,7 +95,7 @@ class ConfusionMatrix():
         if (self.total != 0):
             result.accuracy = (self.TPCount + self.TNCount) / float(self.total);
             
-        # FERA Paper equation (4)        
+        # FERA Paper equation (4)    
         # Essentially a value is either 0 or 1 depending on classification
         # Since 1 squared = 1 the greatest (and smallest) an error can be is 1
         # The sum of the errors is thus self.FPCount + self.FNCount
@@ -178,22 +188,13 @@ def fixClass(cls):
         return cls
     
 def dataset_process_results(dsfolder, config, results):
-    ''' 
-        Results in format: [('AU14/S067_003_00021006.png', 'AU10:1,AU12:0,AU14:0,AU17:1,AU6:0'), ('AU14/S067_004_00021628.png', 'AU10:0,AU12:0,AU14:0,AU17:0,AU6:0')]
-        where
-            AU14/S067_003_00021006.png := file which was fed in for evaluation
-            'AU10:0,AU12:0,AU14:0,AU17:0,AU6:0' := Predictions made
-    '''
-    
     # Prepare Matrix
     classConfusionMatrix = {}
-#     rocFullMatrix = RocMatrix("full")
     rocMatrix = {}
     classConfusionMatrix["full"] = ConfusionMatrix("full", 0, 0, 0, 0)
     for cls in config["CLSLIST"]:
         clsRef = fixClass(cls)
         classConfusionMatrix[clsRef] = ConfusionMatrix(cls, 0, 0, 0, 0)
-#         rocMatrix[cls] = RocMatrix(cls)
         
     resultCount = len( results.items() )
     idx = 1
@@ -202,13 +203,11 @@ def dataset_process_results(dsfolder, config, results):
         sys.stdout.flush()
         idx += 1
         
-#         print "Processing prediction: {}".format(prediction)
         for data in result:
             # Read in actual results
             inputImage = data[0]
             validationDataPath = join(dsfolder, join(config['VALIDATION_DATA'], inputImage))
             validationDataPath = "{}.txt".format( validationDataPath )
-#             validationDataPath = "{}.txt".format( validationDataPath[:-4] )
             actualValues = readActualDataValues(validationDataPath)
 
             # Populate confusion Matrix
@@ -236,6 +235,7 @@ def dataset_process_results(dsfolder, config, results):
         perfMeasurements = classConfusionMatrix[cmKey].performCalculations()
         print perfMeasurements.formatMeasurements(cmKey, config["RECOG_TYPE"])
     
+	# Results are saved according to "Tite" in configuraton file
     outputFile = "{}_{}.csv".format( config["RECOG_TYPE"], config["RECOG_TITLE"])
     writeOutput(classConfusionMatrix, outputFile, config["RECOG_TYPE"])
     
@@ -251,17 +251,7 @@ def writeOutput(classConfusionMatrix, outputFile, label):
                 f.write( perfMeasurements.formatCsvMeasurements(cmKey, label) + "\n")
     except IOError as e:
         print "I/O error({0}): writing file {1}".format(e.strerror, outputFile)
-        
-# def writeROC(rocMatrix, outputFile):
-#     try:
-# #         if (rocMatrix.total % rocMatrix.INS_COUNT) > 0:
-# #             rocMatrix.updateROCMetrics()
-#         
-#         with open(outputFile, 'a+') as f:
-#             f.write( rocMatrix.csvFormat() )
-#     except IOError as e:
-#         print "I/O error({0}): writing file {1}".format(e.strerror, outputFile)
-        
+               
 def doPrediction(dsfolder, config, mode, eye_detection, do_prints=True):
     faces_dir = os.path.join(dsfolder, config['VALIDATION_IMAGES'])
 
@@ -326,11 +316,9 @@ def doPrediction(dsfolder, config, mode, eye_detection, do_prints=True):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--cfg", default="dataset.cfg", help="Dataset config file name")
-#    parser.add_argument("--ctx", default="context", help="Validation Context used to distinguish ROC csv saves")
     parser.add_argument("dsFolder", help="Dataset base folder")
     parser.add_argument("-v", "--verbose", action='store_true', help="verbosity")
     parser.add_argument("--mode", default="adaboost", choices=['adaboost', 'svm'], help="training mode: adaboost or svm")
-#     parser.add_argument("--output", default="output.csv", help="Output File")
     parser.add_argument("--eye-correction", action="store_true", help="Perform eye correction on images")
     args = parser.parse_args()
 

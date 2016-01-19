@@ -1,3 +1,15 @@
+#!/usr/bin/env python2
+
+'''
+    File name:      datasetFillCsv.py
+    Author:         John Eatwell (35264926)
+    Date created:   10/09/2015
+    Python Version: 2.7
+	Details:        Read in training and testing data and copy to correct location ready for cropping
+	Note:           --nomove option used to create a reference to file to be cropped and not to copy file
+
+'''
+
 import os
 import sys
 import shutil

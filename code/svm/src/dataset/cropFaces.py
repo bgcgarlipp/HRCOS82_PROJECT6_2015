@@ -1,4 +1,14 @@
 #!/usr/bin/env python2
+
+'''
+    File name:      cropFaces.py
+    Author:         John Eatwell (35264926)
+    Date created:   10/09/2015
+    Python Version: 2.7
+	Details:        Used in image cropping phase of pre-processing pipeline
+
+'''
+
 import os
 import argparse
 import datasetConfigParser as dcp

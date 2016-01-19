@@ -1,4 +1,11 @@
 #!/usr/bin/python
+'''
+    File name:      CaptureME.py
+    Author:         John Eatwell (35264926)
+    Date created:   10/09/2015
+    Python Version: 2.7
+	Details:        Small desktop application to capture image and parse for au detection. This proof of concept was created for mobile application
+'''
 
 import subprocess
 import Tkinter as tk

@@ -1,7 +1,13 @@
 #!/usr/bin/env python2
-"""
-   Train with Adaboost and select relevant features
-"""
+'''
+    File name:      performTraining.py
+    Update Author:  John Eatwell (35264926)
+    Date created:   10/09/2015
+    Python Version: 2.7
+	Details:        Used to call the SVM classifier for training
+	Note:           --single parameter used to train in single thread, otherwise training is multiprocessor based
+'''
+
 import argparse
 import sys
 import os

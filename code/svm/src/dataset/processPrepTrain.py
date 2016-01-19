@@ -1,5 +1,16 @@
 #!/usr/bin/env python2
 
+'''
+    File name:      processFeatures.py
+	Original Author: Emotime
+    Update Author:  John Eatwell (35264926)
+    Date created:   10/09/2015
+    Python Version: 2.7
+	Details:        Prepare training sets with labelled features sets for training
+	Note:           PvsN parameter was added to distinguish with existing options, 
+	                this is used exclusively for AU training 
+'''
+
 import cv2
 import sys
 import os
@@ -186,6 +197,7 @@ def dataset_prepTrainFiles(dsFolder, multiclassMode, config):
         for auCombo in _dataset_multiclass1toAllExt(config):
             bagoftask.append((auCombo, dsFolder, config))
 
+    # Added for AU training
     if multiclassMode == 'pvsn':
         print "INFO: preparing training files for 1 to 1 (P vs N)"
         for auCombo in _dataset_multiclassPvsN(config):

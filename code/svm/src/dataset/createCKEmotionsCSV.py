@@ -1,7 +1,13 @@
-'''
-Created on Jan 1, 2016
+#!/usr/bin/env python2
 
-@author: John Eatwell
+'''
+    File name:      createCKEmotionsCSV.py
+    Author:         John Eatwell (35264926)
+    Date created:   10/09/2015
+    Python Version: 2.7
+	Details:        Creates CK+ emotion training data
+
+	Use: python createCKEmotionsCSV.py ../../databases/cohn-kanade/images ../../databases/cohn-kanade/emotions origEmoTest.csv
 '''
 
 import os
